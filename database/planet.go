@@ -16,9 +16,8 @@ func InsertPlanets(db *mongo.Collection) {
 
 	totalPlanets, _ := strconv.Atoi(os.Getenv("NUMBER_OF_PLANETS"))
 
+	fmt.Println("Inserting planets...")
 	for i := 1; i <= totalPlanets; i++ {
-		fmt.Println("Inserting planets...")
-
 		if planet, err := c.Planet(i); err == nil {
 			planetStruct := models.Planet{
 				Nome:      planet.Name,
@@ -33,4 +32,5 @@ func InsertPlanets(db *mongo.Collection) {
 			}
 		}
 	}
+	fmt.Println("Planets inserted!")
 }

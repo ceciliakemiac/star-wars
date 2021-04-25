@@ -4,7 +4,6 @@ import (
 	"log"
 	"os"
 	"star-wars/api"
-	"star-wars/database"
 	"star-wars/helper"
 
 	"github.com/spf13/cobra"
@@ -21,7 +20,6 @@ var serverCmd = &cobra.Command{
 
 func startServer() {
 	db := helper.ConnectDB()
-	database.InsertPlanets(db)
 
 	server, err := api.NewServer(os.Getenv("API_ADDR"), db)
 	if err != nil {

@@ -11,5 +11,6 @@
 
 ## How to Run 
 
-- Create a .env file with the necessary environment variables, you might just make it a copy of .env.example file. Change the mongodb url if it is not running at mongodb://localhost:27017/
+- Create a .env file with the necessary environment variables, you might just make it a copy of .env.example file. Change the mongodb url if it is not running at `mongodb://localhost:27017/`
+- Run `go run main.go insertPlanets` to insert planets from Star Wars API
 - Run `go run main.go server` to initialize API
