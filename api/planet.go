@@ -104,7 +104,7 @@ func (s *Server) CreatePlanet(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(result)
 }
 
-func (s *Server) DeleteBook(w http.ResponseWriter, r *http.Request) {
+func (s *Server) DeletePlanet(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	var params = mux.Vars(r)

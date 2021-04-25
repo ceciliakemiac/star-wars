@@ -52,7 +52,7 @@ func (s *Server) CreateRoutes(router *mux.Router, db *mongo.Collection) {
 	basePath.Path("/planet/nome/{nome}").HandlerFunc(s.GetPlanetByName).Methods(http.MethodGet)
 	basePath.Path("/planet/{id}").HandlerFunc(s.GetPlanetByID).Methods(http.MethodGet)
 	basePath.Path("/planet").HandlerFunc(s.CreatePlanet).Methods(http.MethodPost)
-	basePath.Path("/planet/{id}").HandlerFunc(s.DeleteBook).Methods(http.MethodDelete)
+	basePath.Path("/planet/{id}").HandlerFunc(s.DeletePlanet).Methods(http.MethodDelete)
 }
 
 func (s *Server) Ping(w http.ResponseWriter, r *http.Request) {
